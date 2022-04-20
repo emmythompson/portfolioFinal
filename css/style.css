@@ -1,0 +1,440 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+body{
+    background-color: #ffffff;
+    font-family: tahoma, 'Times New Roman';
+    margin: 25px 25px 0px 25px;
+}
+
+button{
+  position: absolute;
+  padding: 10px;
+  background: #851974;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+header{
+  background-color: #F0E66F;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+nav li{
+  border: 2px solid #851974;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 2px;
+  display: inline-block;
+  width: 20%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+h1{
+    font-size: 24px;
+    margin: 12px 0;
+    color: #851974;
+    text-align: center;
+    font-family: 'San Francisco', monospace, 'Times New Roman';
+}
+
+footer{
+    background-color: #BE8AEB;
+    padding: 5px 5px;
+    margin: 0px 0px 0px 0px;
+    }
+
+  a:link{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:visited{color:#000000}
+
+  a.skip {
+    background: white;
+    color: black;
+    padding: 5px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+a.skip:focus {
+  position: static;
+  top: 0;
+}
+
+.active{
+    background-color: #B85AA9;
+    font-weight: bold;
+    border: 3px solid rgb(118, 17, 131);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.container {
+    background-color:  #ffffff;
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:2px solid #851974;
+  }
+
+  .flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 350px;
+    margin-left: 0;
+  }
+
+
+img{
+    margin: 12px;
+    width: 350px;
+    border: 4px solid #F0E66F;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+img:nth-child(2n){
+    border: 4px solid #BE8AEB;
+}
+
+img:hover{
+    filter: grayscale();
+    border: 4px solid;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes grow {
+  from {
+      width: 100px;
+      opacity: 0;
+      filter: grayscale();
+  }
+  to {
+      width:350px;
+      opacity: 1;
+      filter: none;
+  }
+}
+
+.animate{
+  animation: grow 5s ease-in;
+} 
+
+@media screen and (prefers-reduced-motion: reduce){
+  .animate{
+      animation: none;
+  }
+  .flipcard:hover .card,
+  .flipcard:focus-within .card,
+  .cardcontainer:active .card,
+  .flipcard:focus .card {
+    -webkit-transform: none;
+    transform: none;
+    transition: transform none;
+  }
+  .parallax{
+    background-attachment: initial;
+  }
+}
+
+.parallax {
+  background-color: #DDDDDD;
+  background-image: url("../images/poly.JPG");
+  min-height: 250px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p, h1, h2, h3, h4, h5, h6, ol, ul {
+    padding: 10px;
+    list-style-type: circle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input, .reason_options, .park_options{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  span{
+    margin-left:20%;
+    font-family: italic;
+    font-weight: bold;
+  }
+  
+  textarea{
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    background-color: #851974;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+  
+  @media screen and (min-width: 770px) {
+    form{
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    input, .park_options, .reason_options{
+      width:80%;
+    }
+  
+    textarea{
+      width:80%;
+      height: 25vh;
+   }
+   
+   div + label{
+      line-height: 25vh;
+      vertical-align:top;
+   }
+  }
+
+  .flipcard{
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+  
+  .card{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flipcard:hover .card,
+  .flipcard:focus-within .card,
+  .cardcontainer:active .card,
+  .flipcard:focus .card {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      transition: transform 0.5s;
+  }
+  
+  .card-front{
+    background: url('../images/knowsmore.PNG') center no-repeat;
+    background-size: cover;
+    position: absolute;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+    border: 5px solid rgb(88, 6, 86);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  
+  }
+  
+  .card-back{
+    background-color:#c11487;
+    position: absolute;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+    border: 5px solid rgb(88, 6, 86);
+    border-radius: 10px;
+    color: #ffffff;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+  
+  #card-text1, #card-text2{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 40px;
+  }
+
+  .hamburger {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .hamburger #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .hamburger a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .hamburger a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .hamburger a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #d630c5;
+    color: white;
+  }
+
+  #desktop{
+    display: none;
+  }
+
+  /* Tablet */
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .hamburger{
+      display: none;
+    }
+    #desktop{
+      display: inline;
+    }
+
+    .grid_homepage img{
+      width: 100%;
+      height: auto;
+    }
+
+    .flex{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .grid_homepage{
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      padding: 2rem;
+      gap: 1rem;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    body{
+      background-image: url("https://static.vecteezy.com/system/resources/previews/000/556/708/large_2x/vector-modern-abstract-striped-squares-pattern-repeat-on-white-color-background-and-texture.jpg");
+  }
+  }
+
+/* Desktop */
+  @media (min-width: 1025px) {
+    .hamburger{
+      display: none;
+    }
+    #desktop{
+      display: initial;
+      display: flex;
+      margin-right: 20px;
+      align-items: right;
+      font-size: 100%;
+    }
+    header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      }
+    
+    h1{
+      font-family: 'Rubik', monospace, 'Times New Roman';
+    }
+
+    body > header {
+      position: sticky;
+      top: 0px;
+  }
+
+  .flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+    .grid_homepage{
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      padding: 2rem;
+      gap: 1rem;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+
+  body{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/556/708/large_2x/vector-modern-abstract-striped-squares-pattern-repeat-on-white-color-background-and-texture.jpg");
+}
+}

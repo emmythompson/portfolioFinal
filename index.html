@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/wdw_favicon.png">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+	<title>Home Page</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1HT8LK6W1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q1HT8LK6W1');
+</script>
+</head>
+
+<body>
+	<a class= "skip" href="#main">Skip to Main Content</a>
+	<header>
+		<img src="images/logo.png" alt="website logo" id = "logo">
+		<nav id="desktop">
+			<ul>
+				<li class="active"><a href = "index.html" >Home Page</a></li>
+				<li><a href = "hard_of_hearing.html">Hearing Impairments</a></li>
+                <li><a href = "visual_impairment.html">Visual Impairments</a></li>
+                <li><a href = "wheelchair_access.html">Wheelchair Accessibility</a></li>
+				<li><a href = "form.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+		<div class="hamburger">
+			<a href="index.html" class="active">Home</a>
+			<div id="myLinks">
+			  <a href="hard_of_hearing.html">Hearing Impairments</a>
+			  <a href="visual_impairment.html">Visual Impairments</a>
+			  <a href="wheelchair_access.html">Wheelchair Accessibility</a>
+			  <a href="form.html">Contact</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label = "menu button">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+	<div class="container" tabindex="0" id = "text">
+	<div class = "parallax">
+	</div>
+	<div class = "intro">
+		<button id="button">Color Switch</button>
+		<script src="javascript.js"></script>
+		<h1>Accessing Magic</h1>
+			<p>Disney Parks are beloved by many. Accessing these parks can be intimidating, but through this website, we hope to help make
+				 your vacation as stressful free as possible. 
+			</p>
+	</div class= "intro">
+	<div class="grid_homepage">
+		<p>Accesibility at Walt Disney World:<br><br>Throught the years, Walt Disney World has been increasing it's offerings for 
+            accessibility in their parks. From mobility to visual impariments, Disney is 
+            constantly adjusting their services to better assist guests. Because Disney updates their
+            services often, it can be confusing to identify what assistance may be available to you.
+            This beta website aims to collect information on these services to help make trips to the 
+            theme parks less stressful and accesible to more guests. </p>
+            <img src = "images/epcot_ball.jpg" alt = "Entrance to Epcot." class= "animate"/>
+
+        <p>About Me: Emmy Thompson<br><br>I am a current UX research/design graduate student at the University of Michigan. 
+        I obtained my B.S. in Psychology at Florida State University in 2020. My focus area is in
+        creating digital tools that focus on universal design. In 2018, I worked at Walt Disney World 
+        in the Disney College Program and this summer I will be interning at the Disney Animation 
+        Studios working on product design. Disney has always been a personal passion for me, and 
+        I hope to be able to spread it's magic with others. </p>
+        <img src = "images/emmy_dak.JPG" alt = "Woman sitting down at Animal Kingdom entrance." class= "animate"/>
+	</div class="container" tabindex="0" id = "text">
+	</div class="grid_homepage">
+	</main>
+
+	<footer>
+        Emmy Thompson &copy; 2021
+	</footer>
+</body>
+</html>

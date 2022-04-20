@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/wdw_favicon.png">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/3bce85df94.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+	<title>Home Page</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1HT8LK6W1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q1HT8LK6W1');
+</script>
+
+</head>
+<body>
+    <a class= "skip" href="#main">Skip to Main Content</a>
+	<header>
+    <img src="images/logo.png" alt="website logo" id = "logo">
+		<nav id="desktop">
+			<ul>
+				<li><a href = "index.html" >Home Page</a></li>
+				<li><a href = "hard_of_hearing.html">Hearing Impairments</a></li>
+        <li><a href = "visual_impairment.html">Visual Impairments</a></li>
+        <li><a href = "wheelchair_access.html">Wheelchair Accessibility</a></li>
+				<li class="active"><a href = "form.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <main id="main">
+      <div class="hamburger">
+        <a href="form.html" class="active">Contact</a>
+        <div id="myLinks">
+          <a href="index.html">Homepage</a>
+          <a href="hard_of_hearing.html">Hearing Impairments</a>
+          <a href="visual_impairment.html">Visual Impairments</a>
+          <a href="wheelchair_access.html">Wheelchair Accessibility</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label = "menu button">
+          <i class="fa fa-bars"></i>
+        </a>
+        </div>
+      <div class="container" id = "text">
+        <button id="button">Color Switch</button>
+        <script src="javascript.js"></script>
+      <div class="flipcard" tabindex="0">
+        <div class="card">
+        <div class="card-front">
+          </div>
+          <div class="card-back">
+            <p id="card-text1">Have a question?</p>
+            <p id="card-text2">Ask KnowsMore!</p>
+          </div>
+        </div>
+      </div>
+        <h1>Contact Page</h1>
+        <p>Have any additional questions, want to leave me a message or recommendation, or simply want to get in contact? If so, please
+            fill out this form below, and I will email you back as soon as possible. Thank you for visiting!</p>
+        </p>
+ <form
+  action="https://formspree.io/f/xlezlqpr"
+  method="POST"
+>
+  <fieldset>
+
+    <label for="first_name_id"><i class="fa-solid fa-user"></i> First Name</label>
+    <input type="text" placeholder="Enter Your First Name (Given)" id = "first_name_id" name="name" required>
+
+    <label for="last_name_id"><i class="fa-solid fa-user"></i> Last Name</label>
+    <input type="text" placeholder="Enter Your Last Name (Surname)" id = "last_name_id" name="name" required>
+
+    <label for="email_id"><i class="fa-solid fa-envelope"></i> Your Email</label>
+    <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+
+    <label for="reason"><i class="fa-solid fa-clipboard-list"></i> What is the reason for reaching out?(Select all that apply)</label>
+    <section class="reason_options">
+      <input type="checkbox" name="reason" id="question" value="question">
+      <label for="question">Question about Disney</label>
+      <input type="checkbox" name="reason" id="issue" value="issue">
+      <label for="issue">Report an issue with site</label>
+      <input type="checkbox" name="reason" id="comment" value="comment">
+      <label for="comment">Comment</label>
+      <input type="checkbox" name="reason" id="other" value="other">
+      <label for="other">Other</label>
+    </section>
+
+
+    <label for="park"><i class="fa-brands fa-fort-awesome"></i> What is your favorite Disney World Park?</label>
+    <section class="park_options">
+      <select name="park" id="park">
+        <option value="magic kingdom">Magic Kingdom</option>
+        <option value="epcot">Epcot</option>
+        <option value="hollywood studios">Hollywood Studios</option>
+        <option value="animal kingdom">Animal Kingdom</option>
+      </select>
+    </section>
+
+    <label for="msg"><i class="fa-solid fa-comments"></i> Leave A Message or Ask a Question!</label>
+    <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+
+    <input type="submit" value = "Send">
+  </fieldset>
+ </form>
+</div class="container" tabindex="0" id = "text"></main>
+</main>
+</body>
+
+<footer>
+    Emmy Thompson &copy; 2021
+</footer>
+</html>
